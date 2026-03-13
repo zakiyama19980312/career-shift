@@ -9,129 +9,178 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Noto Sans JP',sans-serif;background:#f8fafc;color:#1e293b;-webkit-font-smoothing:antialiased}
+body{font-family:'Noto Sans JP',sans-serif;background:#0f172a;color:#e2e8f0;-webkit-font-smoothing:antialiased}
 
-/* ヘッダー帯 */
-.top{background:#0f172a;color:#fff;text-align:center;padding:32px 16px 28px}
-.top h1{font-size:clamp(20px,5vw,28px);font-weight:900;line-height:1.5;margin-bottom:8px}
-.top h1 em{font-style:normal;color:#38bdf8}
-.top p{font-size:13px;color:#94a3b8}
-.pr{display:inline-block;font-size:10px;color:#94a3b8;border:1px solid #334155;padding:2px 8px;border-radius:3px;margin-top:10px}
+/* ヘッダー */
+.hero{text-align:center;padding:48px 20px 20px;max-width:520px;margin:0 auto}
+.hero-label{display:inline-block;background:rgba(56,189,248,.12);color:#38bdf8;font-size:12px;font-weight:700;padding:5px 14px;border-radius:100px;margin-bottom:16px;border:1px solid rgba(56,189,248,.2)}
+.hero h1{font-size:clamp(22px,6vw,32px);font-weight:900;line-height:1.45;color:#fff;margin-bottom:12px}
+.hero h1 .em{background:linear-gradient(90deg,#38bdf8,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-copy{font-size:14px;color:#94a3b8;line-height:1.7;margin-bottom:20px}
+.hero-nums{display:flex;justify-content:center;gap:24px;margin-bottom:6px}
+.hero-num{text-align:center}
+.hero-num .n{font-size:26px;font-weight:900;color:#fff}
+.hero-num .l{font-size:11px;color:#64748b;margin-top:2px}
+.pr{font-size:10px;color:#475569;margin-top:14px}
 
-/* カード群 */
-.cards{max-width:480px;margin:0 auto;padding:20px 16px 32px}
+/* カード */
+.cards{max-width:520px;margin:0 auto;padding:16px 16px 40px}
 
-/* 個別カード */
-.card{background:#fff;border-radius:14px;padding:20px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);position:relative}
-.card.pick{border:2px solid #2563eb}
-.card.pick .badge{position:absolute;top:-1px;right:-1px;background:#2563eb;color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:0 12px 0 10px}
+.card{background:linear-gradient(145deg,#1e293b,#1a2332);border:1px solid #334155;border-radius:16px;padding:24px 20px;margin-bottom:16px;position:relative;transition:border-color .2s}
+.card:hover{border-color:#475569}
 
-/* カード中身 */
-.card-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.icon.bl{background:#dbeafe}.icon.gr{background:#d1fae5}.icon.pu{background:#ede9fe}
-.name{font-size:16px;font-weight:900}
-.type{font-size:11px;color:#64748b}
+/* No.1カード */
+.card.top{border:2px solid #38bdf8;background:linear-gradient(145deg,#1e293b,#172033)}
+.card.top::before{content:'';position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px;border-radius:16px;background:linear-gradient(135deg,rgba(56,189,248,.1),transparent 60%);z-index:0;pointer-events:none}
+.rank{position:absolute;top:-1px;left:20px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:11px;font-weight:900;padding:4px 14px 6px;border-radius:0 0 10px 10px;letter-spacing:.5px}
 
-.card-body{font-size:13px;color:#475569;line-height:1.7;margin-bottom:12px}
-.card-body strong{color:#1e293b}
+.card-inner{position:relative;z-index:1}
 
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.tag{font-size:11px;padding:3px 10px;border-radius:100px;background:#f1f5f9;color:#475569;font-weight:500}
-.tag.g{background:#d1fae5;color:#065f46}
+/* サービス名 */
+.svc-name{font-size:18px;font-weight:900;color:#fff;margin:20px 0 4px}
+.card:not(.top) .svc-name{margin-top:0}
+.svc-type{font-size:12px;color:#64748b;margin-bottom:12px}
 
-.btn{display:block;text-align:center;text-decoration:none;padding:12px;border-radius:10px;font-size:15px;font-weight:700;transition:all .2s}
-.btn.main{background:#2563eb;color:#fff}
-.btn.main:hover{background:#1d4ed8}
-.btn.sub{background:#fff;color:#2563eb;border:1.5px solid #2563eb}
-.btn.sub:hover{background:#eff6ff}
-.note{font-size:11px;color:#94a3b8;text-align:center;margin-top:6px}
+/* 訴求 */
+.pitch{font-size:14px;color:#cbd5e1;line-height:1.75;margin-bottom:14px}
+.pitch strong{color:#fff;background:linear-gradient(transparent 60%,rgba(56,189,248,.2) 60%)}
+
+/* ポイント */
+.points{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.point{font-size:12px;padding:4px 12px;border-radius:100px;font-weight:700}
+.point.green{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.2)}
+.point.blue{background:rgba(56,189,248,.1);color:#38bdf8;border:1px solid rgba(56,189,248,.15)}
+
+/* ボタン */
+.btn{display:block;text-align:center;text-decoration:none;padding:14px;border-radius:12px;font-size:16px;font-weight:900;transition:all .2s;position:relative;overflow:hidden}
+.btn.primary{background:linear-gradient(135deg,#2563eb,#3b82f6);color:#fff;box-shadow:0 4px 20px rgba(37,99,235,.3)}
+.btn.primary:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(37,99,235,.4)}
+.btn.primary::after{content:'→';margin-left:8px}
+.btn.secondary{background:transparent;color:#38bdf8;border:1.5px solid #334155}
+.btn.secondary:hover{border-color:#38bdf8;background:rgba(56,189,248,.05)}
+.btn.secondary::after{content:'→';margin-left:8px}
+
+/* ボタン下の補足 */
+.btn-sub{text-align:center;margin-top:8px;font-size:11px;color:#475569}
+.btn-sub .free{color:#34d399;font-weight:700}
+
+/* 選ばれる理由（小さく） */
+.reason{display:flex;align-items:center;gap:6px;margin-bottom:8px}
+.reason-icon{width:20px;height:20px;border-radius:50%;background:rgba(16,185,129,.15);color:#34d399;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+.reason-text{font-size:12px;color:#94a3b8}
+
+/* 利用者の声（シンプル） */
+.voice{background:rgba(255,255,255,.03);border-radius:10px;padding:12px 14px;margin-bottom:14px;border-left:3px solid #334155}
+.voice p{font-size:13px;color:#94a3b8;line-height:1.6;font-style:italic}
+.voice .who{font-size:11px;color:#475569;margin-top:4px;font-style:normal}
 
 /* フッター */
-.foot{text-align:center;padding:20px 16px;font-size:11px;color:#94a3b8}
-.foot a{color:#94a3b8;text-decoration:none}
+.foot{text-align:center;padding:24px 16px 32px;font-size:11px;color:#334155;max-width:520px;margin:0 auto}
+.foot a{color:#475569;text-decoration:none}
 </style>
 </head>
 <body>
 
-<div class="top">
-  <h1>食品営業→<em>未経験エンジニア転職</em><br>で使ったサービス</h1>
-  <p>何十社落ちた自分が、実際に使って内定取れたやつだけ。</p>
-  <div class="pr">PR</div>
+<div class="hero">
+  <div class="hero-label">体験談ベースで厳選</div>
+  <h1>食品営業 → <span class="em">未経験エンジニア</span><br>で使ったサービス3選</h1>
+  <p class="hero-copy">何十社落ちた。でも<strong style="color:#fff">1社受かって人生変わった。</strong><br>内定取れた時に使ってたサービスだけ載せてます。</p>
+  <div class="hero-nums">
+    <div class="hero-num"><div class="n">2年</div><div class="l">営業経験</div></div>
+    <div class="hero-num"><div class="n">数十社</div><div class="l">不採用</div></div>
+    <div class="hero-num"><div class="n">5ヶ月</div><div class="l">で内定</div></div>
+  </div>
+  <div class="pr">PR・アフィリエイト広告を含みます</div>
 </div>
 
 <div class="cards">
 
-  <!-- 1 -->
-  <div class="card pick">
-    <div class="badge">イチオシ</div>
-    <div class="card-top">
-      <div class="icon bl">&#128188;</div>
-      <div>
-        <div class="name">【転職エージェント名①】</div>
-        <div class="type">IT特化 / 未経験OK</div>
+  <!-- No.1 -->
+  <div class="card top">
+    <div class="rank">No.1</div>
+    <div class="card-inner">
+      <div class="svc-name">【転職エージェント名①】</div>
+      <div class="svc-type">IT特化の転職エージェント</div>
+
+      <div class="pitch">
+        何十社落ちた後、ここに相談して<strong>書類を全部作り直してもらった</strong>。そこから面接通過率が一気に変わった。未経験エンジニア転職なら、正直ここ一択。
       </div>
+
+      <div class="voice">
+        <p>「一人で20社応募して全滅だったのに、ここに相談してから3社面接通った。もっと早く使えばよかった」</p>
+        <div class="who">— 自分の実体験より</div>
+      </div>
+
+      <div class="points">
+        <span class="point green">未経験OK求人が豊富</span>
+        <span class="point green">書類添削・面接対策</span>
+        <span class="point blue">オンライン面談OK</span>
+      </div>
+
+      <a href="#" class="btn primary" rel="nofollow">無料で相談してみる</a>
+      <div class="btn-sub"><span class="free">完全無料</span> / 1分で登録 / 強引な勧誘なし</div>
     </div>
-    <div class="card-body">
-      何十社落ちた後にここに相談して内定取れた。<strong>書類を全部作り直してくれた</strong>のがデカかった。未経験エンジニア転職ならまずここ。
-    </div>
-    <div class="tags">
-      <span class="tag g">未経験OK</span>
-      <span class="tag g">書類添削</span>
-      <span class="tag g">面接対策</span>
-      <span class="tag">完全無料</span>
-    </div>
-    <a href="#" class="btn main" rel="nofollow">無料で相談してみる</a>
-    <div class="note">※ 1分で登録。オンライン面談OK</div>
   </div>
 
-  <!-- 2 -->
+  <!-- No.2 -->
   <div class="card">
-    <div class="card-top">
-      <div class="icon gr">&#128187;</div>
-      <div>
-        <div class="name">【転職エージェント名②】</div>
-        <div class="type">総合型 / 求人数No.1</div>
+    <div class="card-inner">
+      <div class="svc-name">【転職エージェント名②】</div>
+      <div class="svc-type">総合型 / 求人数No.1クラス</div>
+
+      <div class="pitch">
+        <strong>比較用にもう1社入れておく</strong>のが転職成功のコツ。IT以外の選択肢も見える。自分はここと①を併用して、最終的にITに絞った。
       </div>
+
+      <div class="reason">
+        <div class="reason-icon">&#10003;</div>
+        <div class="reason-text">求人数が圧倒的に多い</div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#10003;</div>
+        <div class="reason-text">IT以外の選択肢も比較できる</div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#10003;</div>
+        <div class="reason-text">大手だからサポートが手厚い</div>
+      </div>
+
+      <div style="margin-bottom:16px"></div>
+      <a href="#" class="btn secondary" rel="nofollow">無料で登録する</a>
+      <div class="btn-sub"><span class="free">完全無料</span> / 登録は1分</div>
     </div>
-    <div class="card-body">
-      求人数がとにかく多い。IT以外も見たい人はここ。<strong>比較用にもう1社登録しておく</strong>と判断しやすい。自分も並行して使ってた。
-    </div>
-    <div class="tags">
-      <span class="tag g">求人数No.1</span>
-      <span class="tag">幅広い業界</span>
-      <span class="tag">完全無料</span>
-    </div>
-    <a href="#" class="btn sub" rel="nofollow">無料で登録する</a>
-    <div class="note">※ 大手の安心感。まず登録して損なし</div>
   </div>
 
-  <!-- 3 -->
+  <!-- No.3 -->
   <div class="card">
-    <div class="card-top">
-      <div class="icon pu">&#127891;</div>
-      <div>
-        <div class="name">【プログラミングスクール名】</div>
-        <div class="type">スクール / 転職保証あり</div>
+    <div class="card-inner">
+      <div class="svc-name">【プログラミングスクール名】</div>
+      <div class="svc-type">スクール / 転職保証つき</div>
+
+      <div class="pitch">
+        自分は独学だったけど、正直<strong>スクール行ってたら3ヶ月早く転職できた</strong>と思う。独学が不安な人、最短で転職したい人はここ。
       </div>
+
+      <div class="reason">
+        <div class="reason-icon">&#10003;</div>
+        <div class="reason-text">無料体験だけで学習の方向性がわかる</div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#10003;</div>
+        <div class="reason-text">転職できなかったら全額返金</div>
+      </div>
+
+      <div style="margin-bottom:16px"></div>
+      <a href="#" class="btn secondary" rel="nofollow">無料体験を受けてみる</a>
+      <div class="btn-sub"><span class="free">無料体験あり</span> / オンライン完結</div>
     </div>
-    <div class="card-body">
-      自分は独学だったけど、正直<strong>スクール行ってたらもっと早かった</strong>と思う。独学が不安な人はまず無料体験だけでも受けてみて。
-    </div>
-    <div class="tags">
-      <span class="tag g">無料体験あり</span>
-      <span class="tag g">転職保証</span>
-      <span class="tag">メンター付き</span>
-    </div>
-    <a href="#" class="btn sub" rel="nofollow">無料体験を受けてみる</a>
-    <div class="note">※ 無料体験だけで方向性わかる</div>
   </div>
 
 </div>
 
 <div class="foot">
   <p>当サイトはアフィリエイト広告を利用しています</p>
-  <p>&copy; 2026 <a href="https://www.threads.net/@sales_to_eng">@sales_to_eng</a></p>
+  <p style="margin-top:4px">&copy; 2026 <a href="https://www.threads.net/@sales_to_eng">@sales_to_eng</a></p>
 </div>
 
 </body>
