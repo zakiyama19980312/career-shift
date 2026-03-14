@@ -3,202 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>20代で転職迷ってる人へ｜自分に合ったエージェントの見つけ方</title>
-<meta name="description" content="営業から未経験エンジニアに転職した自分が、本当に使ってよかったサービスをまとめました">
+<title>転職エージェント選びで失敗した話｜20代の転職体験談</title>
+<meta name="description" content="大手エージェントで放置された営業マンが、自分に合うエージェントを見つけた方法">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans JP',sans-serif;background:#0f172a;color:#e2e8f0;-webkit-font-smoothing:antialiased}
 
-.hero{text-align:center;padding:48px 20px 24px;max-width:520px;margin:0 auto}
+.wrap{max-width:520px;margin:0 auto}
+
+/* ヘッダー */
+.hero{text-align:center;padding:48px 20px 28px}
 .hero-label{display:inline-block;background:rgba(56,189,248,.12);color:#38bdf8;font-size:12px;font-weight:700;padding:5px 14px;border-radius:100px;margin-bottom:16px;border:1px solid rgba(56,189,248,.2)}
-.hero h1{font-size:clamp(20px,5.5vw,28px);font-weight:900;line-height:1.5;color:#fff;margin-bottom:14px}
+.hero h1{font-size:clamp(20px,5.5vw,28px);font-weight:900;line-height:1.5;color:#fff;margin-bottom:16px}
 .hero h1 .em{background:linear-gradient(90deg,#38bdf8,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-copy{font-size:14px;color:#94a3b8;line-height:1.8;margin-bottom:20px}
+.hero-copy{font-size:14px;color:#94a3b8;line-height:1.8;margin-bottom:20px;text-align:left;padding:0 4px}
 .hero-copy strong{color:#e2e8f0;font-weight:700}
-.hero-nums{display:flex;justify-content:center;gap:24px;margin-bottom:6px}
+.hero-nums{display:flex;justify-content:center;gap:24px}
 .hero-num{text-align:center}
 .hero-num .n{font-size:26px;font-weight:900;color:#fff}
 .hero-num .l{font-size:11px;color:#64748b;margin-top:2px}
-.pr{font-size:10px;color:#475569;margin-top:14px}
 
-.cards{max-width:520px;margin:0 auto;padding:16px 16px 40px}
+/* ストーリー */
+.story{padding:0 16px 24px}
+.story-box{background:rgba(255,255,255,.02);border:1px solid #1e293b;border-radius:14px;padding:20px 18px}
+.story-title{font-size:14px;font-weight:900;color:#fff;margin-bottom:10px}
+.story-text{font-size:13px;color:#94a3b8;line-height:1.85}
+.story-text strong{color:#cbd5e1;font-weight:700}
 
-.card{background:linear-gradient(145deg,#1e293b,#1a2332);border:1px solid #334155;border-radius:16px;padding:24px 20px;margin-bottom:16px;position:relative;transition:border-color .2s}
-.card:hover{border-color:#475569}
-
-.card.top{border:2px solid #38bdf8;background:linear-gradient(145deg,#1e293b,#172033)}
-.card.top::before{content:'';position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px;border-radius:16px;background:linear-gradient(135deg,rgba(56,189,248,.1),transparent 60%);z-index:0;pointer-events:none}
-.rank{position:absolute;top:-1px;left:20px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:11px;font-weight:900;padding:4px 14px 6px;border-radius:0 0 10px 10px;letter-spacing:.5px}
-
+/* メインカード */
+.main-card{padding:0 16px 16px}
+.card{background:linear-gradient(145deg,#1e293b,#172033);border:2px solid #38bdf8;border-radius:16px;padding:28px 20px;position:relative}
+.card::before{content:'';position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px;border-radius:16px;background:linear-gradient(135deg,rgba(56,189,248,.1),transparent 60%);z-index:0;pointer-events:none}
 .card-inner{position:relative;z-index:1}
 
-.svc-name{font-size:18px;font-weight:900;color:#fff;margin:20px 0 4px}
-.card:not(.top) .svc-name{margin-top:0}
-.svc-type{font-size:12px;color:#64748b;margin-bottom:12px}
+.card-label{display:inline-block;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:11px;font-weight:900;padding:4px 14px;border-radius:100px;margin-bottom:14px}
+.svc-name{font-size:22px;font-weight:900;color:#fff;margin-bottom:4px}
+.svc-type{font-size:12px;color:#64748b;margin-bottom:16px}
 
-.pitch{font-size:14px;color:#cbd5e1;line-height:1.8;margin-bottom:14px}
+.pitch{font-size:14px;color:#cbd5e1;line-height:1.85;margin-bottom:16px}
 .pitch strong{color:#fff;background:linear-gradient(transparent 60%,rgba(56,189,248,.2) 60%)}
 
-.points{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-.point{font-size:12px;padding:4px 12px;border-radius:100px;font-weight:700}
+.voice{background:rgba(255,255,255,.03);border-radius:10px;padding:14px 16px;margin-bottom:18px;border-left:3px solid #38bdf8}
+.voice p{font-size:13px;color:#94a3b8;line-height:1.7;font-style:italic}
+.voice .who{font-size:11px;color:#475569;margin-top:6px;font-style:normal}
+
+.features{margin-bottom:20px}
+.feature{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.feature-icon{width:22px;height:22px;border-radius:50%;background:rgba(16,185,129,.15);color:#34d399;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:1px}
+.feature-text{font-size:13px;color:#cbd5e1;line-height:1.6}
+.feature-text strong{color:#fff;font-weight:700}
+
+.points{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.point{font-size:12px;padding:5px 14px;border-radius:100px;font-weight:700}
 .point.green{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.2)}
 .point.blue{background:rgba(56,189,248,.1);color:#38bdf8;border:1px solid rgba(56,189,248,.15)}
 
-.btn{display:block;text-align:center;text-decoration:none;padding:14px;border-radius:12px;font-size:16px;font-weight:900;transition:all .2s;position:relative;overflow:hidden}
-.btn.primary{background:linear-gradient(135deg,#2563eb,#3b82f6);color:#fff;box-shadow:0 4px 20px rgba(37,99,235,.3)}
-.btn.primary:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(37,99,235,.4)}
-.btn.primary::after{content:'→';margin-left:8px}
-.btn.secondary{background:transparent;color:#38bdf8;border:1.5px solid #334155}
-.btn.secondary:hover{border-color:#38bdf8;background:rgba(56,189,248,.05)}
-.btn.secondary::after{content:'→';margin-left:8px}
-
-.btn-sub{text-align:center;margin-top:8px;font-size:11px;color:#475569}
+.btn{display:block;text-align:center;text-decoration:none;padding:16px;border-radius:12px;font-size:17px;font-weight:900;background:linear-gradient(135deg,#2563eb,#3b82f6);color:#fff;box-shadow:0 4px 20px rgba(37,99,235,.3);transition:all .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(37,99,235,.4)}
+.btn::after{content:'→';margin-left:8px}
+.btn-sub{text-align:center;margin-top:10px;font-size:11px;color:#475569}
 .btn-sub .free{color:#34d399;font-weight:700}
 
-.reason{display:flex;align-items:center;gap:6px;margin-bottom:8px}
-.reason-icon{width:20px;height:20px;border-radius:50%;background:rgba(16,185,129,.15);color:#34d399;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
-.reason-text{font-size:12px;color:#94a3b8}
-
-.voice{background:rgba(255,255,255,.03);border-radius:10px;padding:12px 14px;margin-bottom:14px;border-left:3px solid #334155}
-.voice p{font-size:13px;color:#94a3b8;line-height:1.7;font-style:italic}
-.voice .who{font-size:11px;color:#475569;margin-top:4px;font-style:normal}
-
-.section-note{max-width:520px;margin:0 auto;padding:0 16px 8px}
-.note-box{background:rgba(255,255,255,.02);border:1px solid #1e293b;border-radius:12px;padding:16px;font-size:13px;color:#94a3b8;line-height:1.7}
+/* 補足 */
+.note{padding:16px 16px 0}
+.note-box{background:rgba(255,255,255,.02);border:1px solid #1e293b;border-radius:12px;padding:16px 18px;font-size:13px;color:#94a3b8;line-height:1.75}
 .note-box strong{color:#cbd5e1;font-weight:700}
 
-.foot{text-align:center;padding:24px 16px 32px;font-size:11px;color:#334155;max-width:520px;margin:0 auto}
+.foot{text-align:center;padding:24px 16px 36px;font-size:10px;color:#334155}
 .foot a{color:#475569;text-decoration:none}
+.pr{font-size:10px;color:#475569;text-align:center;padding:12px 16px 0}
 </style>
 </head>
 <body>
 
-<div class="hero">
-  <div class="hero-label">20代の転職体験談</div>
-  <h1>転職エージェント、<br><span class="em">どこ使えばいいかわからん</span><br>って人へ</h1>
-  <p class="hero-copy">
-    自分も最初そうだった。<br>
-    大手に登録してみたけど<strong>全然合わなくて</strong>、<br>
-    結局どこがいいかわからないまま<br>
-    一人で何十社も応募して全滅した。
-  </p>
-  <div class="hero-nums">
-    <div class="hero-num"><div class="n">2年</div><div class="l">営業やってた</div></div>
-    <div class="hero-num"><div class="n">数十社</div><div class="l">落ちた</div></div>
-    <div class="hero-num"><div class="n">5ヶ月</div><div class="l">で内定出た</div></div>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-label">20代の転職体験談</div>
+    <h1>転職エージェント、<br><span class="em">どこがいいかわからん</span><br>って人へ</h1>
+    <p class="hero-copy">
+      自分も最初そうだった。<br>
+      大手に登録したら求人だけ大量に送られてきて放置。中小は聞いたことない会社ばっかで不安。結局一人で何十社も応募して<strong>全滅</strong>した。
+    </p>
+    <div class="hero-nums">
+      <div class="hero-num"><div class="n">2年</div><div class="l">営業やってた</div></div>
+      <div class="hero-num"><div class="n">数十社</div><div class="l">落ちた</div></div>
+      <div class="hero-num"><div class="n">5ヶ月</div><div class="l">で内定出た</div></div>
+    </div>
   </div>
+
+  <div class="story">
+    <div class="story-box">
+      <div class="story-title">そこからどう変わったか</div>
+      <div class="story-text">
+        「自分に合うエージェントを探す」っていう発想がなかった。とりあえず有名なとこに登録して、合わなくても我慢して使ってた。<br><br>
+        でも<strong>エージェントを変えただけで書類通過率が全然変わった</strong>。結局、サービスの良し悪しじゃなくて「自分に合ってるかどうか」だった。
+      </div>
+    </div>
+  </div>
+
+  <div class="main-card">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-label">自分が使ってよかったサービス</div>
+        <div class="svc-name">キャリコン</div>
+        <div class="svc-type">30分の面談で、自分に合うエージェントを紹介してくれる</div>
+
+        <div class="pitch">
+          やることはシンプルで、<strong>30分のオンライン面談を受けるだけ</strong>。自分の希望とか状況を話したら、500名以上のエージェントの中から合う人を紹介してくれる。
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">&#10003;</div>
+            <div class="feature-text"><strong>面談内容をエージェントに共有</strong>してくれるから、毎回同じ自己紹介しなくていい</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#10003;</div>
+            <div class="feature-text">キャリコンが<strong>精査した提携エージェント</strong>だけ紹介するから、変なところに当たらない</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#10003;</div>
+            <div class="feature-text">希望条件を事前に伝えてくれるから、<strong>最初から話が早い</strong></div>
+          </div>
+        </div>
+
+        <div class="voice">
+          <p>「大手で放置されてモヤモヤしてた時にこれ使った。ちゃんと話聞いてくれて、紹介されたエージェントの対応も全然違った。もっと早く知りたかった」</p>
+          <div class="who">— 自分の体験</div>
+        </div>
+
+        <div class="points">
+          <span class="point green">完全無料</span>
+          <span class="point green">オンライン完結</span>
+          <span class="point blue">20代向け</span>
+          <span class="point blue">強引な勧誘なし</span>
+        </div>
+
+        <a href="#" class="btn" rel="nofollow">無料で相談してみる</a>
+        <div class="btn-sub"><span class="free">完全無料</span> / 30秒で登録 / オンライン面談OK</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="note-box">
+      <strong>最後にひとつだけ。</strong><br>
+      エージェント選びで転職の結果はかなり変わる。自分は合わないエージェントに時間使って遠回りした。迷ってるなら、まず「自分に合うところを見つける」から始めたほうがいい。
+    </div>
+  </div>
+
   <div class="pr">PR・アフィリエイト広告を含みます</div>
-</div>
 
-<div class="cards">
-
-  <!-- キャリコン（メイン） -->
-  <div class="card top">
-    <div class="rank">イチオシ</div>
-    <div class="card-inner">
-      <div class="svc-name">キャリコン</div>
-      <div class="svc-type">自分に合ったエージェントを紹介してくれるサービス</div>
-
-      <div class="pitch">
-        正直、転職エージェントって多すぎてどこがいいかわからなかった。大手は求人だけ大量に送ってきて放置されるし、中小は聞いたことない会社ばっかで不安だし。<br><br>
-        で、これ使ってみたら<strong>30分のオンライン面談だけで、自分に合うエージェントを紹介</strong>してくれた。しかも面談で話した内容をそのままエージェントに共有してくれるから、<strong>毎回同じ自己紹介しなくていい</strong>のが地味にデカい。
-      </div>
-
-      <div class="voice">
-        <p>「大手で放置されてた自分には、ちゃんとヒアリングしてくれるだけでありがたかった。紹介されたエージェントも対応よくて、そこ経由で内定出た」</p>
-        <div class="who">— 自分の実体験</div>
-      </div>
-
-      <div class="points">
-        <span class="point green">完全無料</span>
-        <span class="point green">500名以上から厳選</span>
-        <span class="point blue">30分のオンライン面談だけ</span>
-        <span class="point blue">同じ話を繰り返さなくてOK</span>
-      </div>
-
-      <div class="reason">
-        <div class="reason-icon">&#10003;</div>
-        <div class="reason-text">大手が合わなかった人にちょうどいい</div>
-      </div>
-      <div class="reason">
-        <div class="reason-icon">&#10003;</div>
-        <div class="reason-text">精査された提携エージェントだけ紹介</div>
-      </div>
-      <div class="reason">
-        <div class="reason-icon">&#10003;</div>
-        <div class="reason-text">希望条件をエージェントに事前共有してくれる</div>
-      </div>
-
-      <div style="margin-top:18px"></div>
-      <a href="#" class="btn primary" rel="nofollow">30秒で無料登録する</a>
-      <div class="btn-sub"><span class="free">完全無料</span> / オンライン完結 / 強引な勧誘なし</div>
-    </div>
+  <div class="foot">
+    <p>&copy; 2026 <a href="https://www.threads.net/@sales_to_eng">@sales_to_eng</a></p>
   </div>
 
-  <!-- No.2 -->
-  <div class="card">
-    <div class="card-inner">
-      <div class="svc-name">【転職エージェント名②】</div>
-      <div class="svc-type">総合型 / 求人数が多い</div>
-
-      <div class="pitch">
-        キャリコンで紹介されたエージェントと比較するために<strong>もう1社入れとく</strong>と、判断しやすくなる。自分もそうやって最終的に決めた。
-      </div>
-
-      <div class="reason">
-        <div class="reason-icon">&#10003;</div>
-        <div class="reason-text">求人数が多いから比較に使える</div>
-      </div>
-      <div class="reason">
-        <div class="reason-icon">&#10003;</div>
-        <div class="reason-text">IT以外の選択肢も見れる</div>
-      </div>
-
-      <div style="margin-bottom:16px"></div>
-      <a href="#" class="btn secondary" rel="nofollow">無料で登録する</a>
-      <div class="btn-sub"><span class="free">完全無料</span> / 1分で登録</div>
-    </div>
-  </div>
-
-  <!-- No.3 -->
-  <div class="card">
-    <div class="card-inner">
-      <div class="svc-name">【プログラミングスクール名】</div>
-      <div class="svc-type">スクール / 転職保証つき</div>
-
-      <div class="pitch">
-        自分は独学で乗り切ったけど、振り返ると<strong>スクール行ってたら3ヶ月は早く転職できた</strong>と思う。独学で不安な人はまず無料体験だけでも。
-      </div>
-
-      <div class="reason">
-        <div class="reason-icon">&#10003;</div>
-        <div class="reason-text">無料体験で方向性がわかる</div>
-      </div>
-      <div class="reason">
-        <div class="reason-icon">&#10003;</div>
-        <div class="reason-text">転職できなかったら全額返金</div>
-      </div>
-
-      <div style="margin-bottom:16px"></div>
-      <a href="#" class="btn secondary" rel="nofollow">無料体験を見てみる</a>
-      <div class="btn-sub"><span class="free">無料体験あり</span> / オンライン完結</div>
-    </div>
-  </div>
-
-</div>
-
-<div class="section-note">
-  <div class="note-box">
-    <strong>ぶっちゃけ一番大事なこと：</strong><br>
-    エージェント選びで転職の結果はかなり変わる。自分は最初一人でやって全滅して、エージェント変えたら3社通った。合わないところに時間使うのが一番もったいないから、まずは自分に合うところを見つけるのが先。
-  </div>
-</div>
-
-<div class="foot">
-  <p>当サイトはアフィリエイト広告を利用しています</p>
-  <p style="margin-top:4px">&copy; 2026 <a href="https://www.threads.net/@sales_to_eng">@sales_to_eng</a></p>
 </div>
 
 </body>
